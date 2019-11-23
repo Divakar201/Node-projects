@@ -1,5 +1,3 @@
-// console.log("client JS has loaded")
-
 const weatherForm = document.querySelector('.form')
 const address = document.querySelector('input')
 message1 = document.querySelector('#message1')
