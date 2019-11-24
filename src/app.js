@@ -3,7 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
-const chalk = require('chalk')
+
 
 //port configuration
 const port = process.env.PORT || 3000
@@ -67,9 +67,6 @@ app.get('/weather', (req, res) => {
                 location,
                 address: searchaddress
             })
-
-            // console.log(chalk.green.bold(location))
-            // console.log(chalk.magenta.bold(forecastData))
         })
     })
 })
