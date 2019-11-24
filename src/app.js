@@ -5,6 +5,8 @@ const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 const chalk = require('chalk')
 
+//port configuration
+const port = process.env.PORT || 3000
 
 app = express()
 
@@ -81,6 +83,6 @@ app.get('*', (req, res) => {
 
 })
 
-app.listen(3000, () => {
-    console.log("Server stared at 3000 port")
+app.listen(port, () => {
+    console.log("Server stared at " + port + " port")
 })
