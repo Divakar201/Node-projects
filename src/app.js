@@ -26,7 +26,7 @@ app.use(express.static(PublicDirPath));
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        body: 'Home page',
+        body: 'Weather page',
         name: 'Divakar'
     })
 })
