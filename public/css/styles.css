@@ -9,6 +9,15 @@ body {
     min-height: 100vh;
 }
 
+.nature {
+    width: 650px;
+    padding-top: 16px;
+}
+
+.text {
+    padding-top: 60px;
+}
+
 h1 {
     font-size: 64px;
     margin-bottom: 16px;

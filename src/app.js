@@ -25,7 +25,7 @@ app.use(express.static(PublicDirPath));
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'weather',
+        title: 'Weather',
         body: 'Home page',
         name: 'Divakar'
     })
@@ -40,7 +40,7 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/help', (req, res) => {
-    res.render('about', {
+    res.render('help', {
         title: 'Help',
         body: 'Help page',
         name: 'Divakar'
@@ -74,11 +74,20 @@ app.get('/weather', (req, res) => {
     })
 })
 
+app.get('/help/*', (req, res) => {
+    res.render('404page', {
+        title: '404 Page',
+        body: 'help article not found',
+        name: 'Divakar',
+        error: 'Page not found',
+    })
+})
+
 app.get('*', (req, res) => {
     res.render('404page', {
         name: 'Divakar',
         title: '404 Page',
-        error: 'Page not found'
+        error: 'Page not found',
     })
 
 })
